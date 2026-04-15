@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .selector-container {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        select {
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        body {
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>mapas Venezuela</h1>
+    <p>Los mapas de Venezuela representan la diversa geografía del país, mostrando sus regiones naturales como la
+        <strong> costa
+            del Caribe</strong>, la <strong>cordillera de los Andes</strong>, los <strong>llanos del Orinoco</strong> y
+        la <strong>selva amazónica</strong>. Además, ilustran la
+        división política del territorio en sus <strong>23 estados</strong>, un <strong> Distrito Capital</strong> y las
+        <strong>Dependencias Federales</strong>.
+    </p>
+
+    <h2>Seleccione Estado y Municipio</h2>
+    <div class="selector-container">
+        <label for="estado">Estado:</label><br>
+        <select id="estado">
+            <option value="">Seleccione un estado...</option>
+        </select>
+
+        <br><br>
+
+        <label for="municipio">Municipio:</label><br>
+        <select id="municipio" disabled>
+            <option value="">Seleccione un municipio...</option>
+        </select>
+    </div>
+
+    <!-- Leyenda de información del municipio -->
+    <div id="leyenda"
+        style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f1f8e9;">
+        <h3 style="margin-top:0;">Información del Municipio</h3>
+        <p><strong>Población:</strong> <span id="poblacion"></span></p>
+        <p><strong>Coro del Himno:</strong> <br><em id="himno"></em></p>
+
+        <div id="lvbp-section" style="display: none; margin-top: 15px; border-top: 1px dashed #ccc; padding-top: 10px;">
+            <h4 style="margin-top: 0; color: #1e3a8a;">⚾ Equipo LVBP: <span id="equipo-nombre"></span></h4>
+            <p><strong>Apodo de aficionados:</strong> <span id="equipo-apodo"></span></p>
+            <p><strong>Fanaticada Calculada:</strong> <span id="equipo-fans"></span></p>
+        </div>
+    </div>
+
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
